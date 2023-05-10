@@ -47,11 +47,15 @@ function validateName(name) {
 }
 
 function validatePhone(phone) {
-  const phoneRegex = /^\d{10}$/;
   const firstDigit = 1;
   const secondDigit = 2;
-  phone.charAt(0) == firstDigit && phone;
-  return phoneRegex.test(phone) && phone.length <= 14;
+  if (
+    phone.length <= 14 &&
+    phone.charAt(0) == firstDigit &&
+    phone.charAt(1) == secondDigit
+  ) {
+    return false;
+  }
 }
 
 function validateDropdown(dropdown) {
