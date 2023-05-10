@@ -21,7 +21,9 @@ form.addEventListener("submit", (event) => {
   }
 
   if (!validatePhone(phone.value)) {
-    alert("Please enter a phone number with maximum 14-digit phone number.");
+    alert(
+      "Please enter a phone number with maximum 14-digit phone number, first digit is 0 and second digit is 8."
+    );
     phone.focus();
     return false;
   }
